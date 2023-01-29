@@ -24,17 +24,22 @@
                 <fieldset>
                     <legend class="form__label">Información básica</legend>
                     <div class="input-container">
-                        <input name="name" id="name" class="input" type="text" placeholder="Nombre">
+                        <!--required hará que sea obligatorio rellenar ese input o campo del formulario.-->
+                        <input name="name" id="name" class="input" type="text" placeholder="Nombre" required>
                         <label class="input-label" for="name">Nombre</label>
                         <span class="input-message-error">Este campo no es valido</span>
                     </div>
                     <div class="input-container">
-                        <input name="email" id="email" class="input" type="text" placeholder="Email">
+                        <!-- Pondremos que es de tipo email para que el usuario ponga su email correctamente.-->
+                        <input name="email" id="email" class="input" type="text" placeholder="Email" required>
                         <label class="input-label" for="email">Email</label>
                         <span class="input-message-error">Este campo no es valido</span>
                     </div>
                     <div class="input-container">
-                        <input name="password" id="password" class="input" type="text" placeholder="Contraseña">
+                         <!--el type password que es para las contraseñas en lugar de mostrarme lo que yo escribí,lo rellena con puntos. -->
+                        <!--minlength: longitud mínima que necesita tener este input de caracteres-->
+                        <!--maxlength: longitud máxima que necesita tener este input de caracteres-->
+                        <input name="password" id="password" class="input" type="text" placeholder="Contraseña" required minlength="6" maxlength="12">
                         <label class="input-label" for="password">Contraseña</label>
                         <span class="input-message-error">Este campo no es valido</span>
                     </div>
