@@ -48,7 +48,8 @@
                 <fieldset>
                     <legend class="form__label">Información personal</legend>
                     <div class="input-container">
-                        <input name="birth" id="birth" class="input" type="text" placeholder="Fecha de nacimento">
+                        <!--El input de tipo date hace que escribamos en formato de fecha-->
+                        <input name="birth" id="birth" class="input" type="date" placeholder="Fecha de nacimento" required>
                         <label class="input-label" for="birth">Fecha de nacimiento</label>
                         <span class="input-message-error">Este campo no es valido</span>
                     </div>
@@ -80,5 +81,7 @@
             </form>
         </section>
     </main>
+    <!--Vinculamos nuestro archivo de JavaScript llamado validaciones.-->
+    <script src="./js/validaciones.js"></script>
 </body>
 </html>
