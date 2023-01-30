@@ -49,7 +49,8 @@
                     <legend class="form__label">Información personal</legend>
                     <div class="input-container">
                         <!--El input de tipo date hace que escribamos en formato de fecha-->
-                        <input name="birth" id="birth" class="input" type="date" placeholder="Fecha de nacimento" required>
+                        <!--Le pondremos un data atribute llamado tipo para hacerlo reutilizable el código.-->
+                        <input name="birth" id="birth" class="input" type="date" placeholder="Fecha de nacimento" required data-tipo="nacimiento">
                         <label class="input-label" for="birth">Fecha de nacimiento</label>
                         <span class="input-message-error">Este campo no es valido</span>
                     </div>
@@ -82,6 +83,8 @@
         </section>
     </main>
     <!--Vinculamos nuestro archivo de JavaScript llamado validaciones.-->
-    <script src="./js/validaciones.js"></script>
+    <!--Necesitamos poner tipo modulo aquí porque hemos creado varios archivos JavaScript o modulos.-->
+    <!--app.js será nuestro archivo JavaScript principal.-->
+    <script src="./js/app.js" type="module"></script>
 </body>
 </html>

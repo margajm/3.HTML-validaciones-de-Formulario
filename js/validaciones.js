@@ -1,14 +1,21 @@
-//Vamos a validar si la fecha indica que e smayor de 18 años
-//Para ello primero seleccionamos el input de la fecha por su ID.
-const inputNacimiento = document.querySelector("#birth") ;
-//Le pasaremos un addEventListener
-//El evento  será blur o sea luego que salga del input  o que se desenfoque el usuario de allí.
-//Luego el siguiente parámetro será una función anónima donde recibimos el evento.
-inputNacimiento.addEventListener("blur", (evento) => {
-    //Evento.target retorna el objeto por el cuál se generó el evento.
-    //Llamamos a la función validarNacimiento
-    validarNacimiento(evento.target);
-});
+//Este input estará vinculado a otro archivo que iremos generando
+//valida va a recibir el input, va a verificar cuál es el tipo de input a través de dataset.tipo 
+//exportamos para usarla en otros archivos
+export function valida(input){
+    //Dataset lo que nosotros estamos obteniendo es la colección de todos los datas atribute
+    //El punto tipo es para obtener el de la fecha de nacimiento que le pusimos como nombre tipo.
+    const tipoDeInput = input.dataset.tipo;
+    //Necesitamos por cada uno de los tipos de input o por el tipo de input, verificar si existe dentro de los validadores.
+    if(validadores[tipoDeInput]){
+        validadores[tipoDeInput](input);
+    }
+};
+
+const validadores = {
+    //Vemos que coincidan el nombre del tipo = nacimiento con la llave dentro de este objeto que es una arrow funcion.
+    //Una función que va a recibir input y lo que va a hacer es mandar a llamar validarNacimiento. 
+    nacimiento: (input) => validarNacimiento(input),
+};
 
 //Creamos una funcion para validar la fecha de nacimiento 
 //Pasamos como parámetro el input
