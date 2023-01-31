@@ -24,7 +24,7 @@ function validarNacimiento(input){
     //Lo que nos interesa es validar el valor del input la fecha que puso el usuario.
     const fechaCliente = new Date(input.value);
     //Inicializaremos vacio el mensaje porque si e smayor de 18 no interesa darle algun mensaje.
-    let mensaje = " ";
+    let mensaje = "";
 
     //Si no es verdadero que es mayor de edad la fecha del cliente o sea si e si es false que ya tiene 18 años.
     if(!mayorDeEdad(fechaCliente)){
@@ -39,7 +39,7 @@ function validarNacimiento(input){
 };
 
 //Funcion para validar si en la fecha hay una diferencia de 18 años.
-function mayorDeEdad(fechaCliente){
+function mayorDeEdad(fecha){
         //Tenemos que hacer la comparación de la fecha actual con la fecha que ingreso el usuario.
         //Vamos solo a crear una nueva instancia de la clase date de donde obtendremos la fechaActual.
         const fechaActual = new Date();

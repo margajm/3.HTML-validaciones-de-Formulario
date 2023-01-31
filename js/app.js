@@ -8,7 +8,7 @@ import { valida } from "./validaciones.js";
 const inputs = document.querySelectorAll("input");
 
 //Para cada uno de los inputs vamos a obtener input,
-inputs.forEach(input => {
+inputs.forEach((input) => {
         //le va a agregar a cada uno de estos inputs el addEventListener de blur cuando salga de foco 
         //y cuando salga de foco va a mandar a llamar esta función que recibe al input la cual es “valida”.
         input.addEventListener("blur", (input) => {
