@@ -81,6 +81,22 @@ const mensajesDeError =  {
         valueMissing: "Este campo no puede estar vacío.",
         patternMismatch: "El formato requerido es XXXXXXXXXX.",
     },
+
+    direccion: {
+        valueMissing: "Este campo no puede estar vacío.",
+        patternMismatch: "La dirección debe contener entre 10 a 40 caracteres",
+    },
+
+    ciudad: {
+        valueMissing: "Este campo no puede estar vacío.",
+        patternMismatch: "La ciudad debe contener entre 10 a 40 caracteres",
+    },
+
+    distrito: {
+        valueMissing: "Este campo no puede estar vacío.",
+        patternMismatch: "El distrito debe contener entre 10 a 40 caracteres",
+    },
+
 };
 
 const validadores = {
@@ -119,7 +135,7 @@ function validarNacimiento(input){
     //Creamos una nueva instancia de nuestra clase date 
     //Lo que nos interesa es validar el valor del input la fecha que puso el usuario.
     const fechaCliente = new Date(input.value);
-    //Inicializaremos vacio el mensaje porque si e smayor de 18 no interesa darle algun mensaje.
+    //Inicializaremos vacio el mensaje porque si es mayor de 18 no interesa darle algun mensaje.
     let mensaje = "";
 
     //Si no es verdadero que es mayor de edad la fecha del cliente o sea si e si es false que ya tiene 18 años.
