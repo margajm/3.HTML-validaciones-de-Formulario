@@ -57,7 +57,9 @@
                         <span class="input-message-error">Este campo no es valido</span>
                     </div>
                     <div class="input-container">
-                        <input name="phoneNumber" id="phoneNumber" class="input" type="text" placeholder="Número telefónico">
+                        <!--El input de tipo text hace que si podamos añadirle un maxlength un tamaño maximo de caracteres en este caso 10.-->
+                        <!-- pattern = /d{10} Quiero que haya diez números que pueden ir del 0 al 9.-->
+                        <input name="phoneNumber" id="phoneNumber" class="input" type="text" placeholder="Número telefónico" pattern="\d{10}" required minlength="10" maxlength="10" data-tipo="numero">
                         <label class="input-label" for="phoneNumber">Número telefónico</label>
                         <span class="input-message-error">Este campo no es valido</span>
                     </div>

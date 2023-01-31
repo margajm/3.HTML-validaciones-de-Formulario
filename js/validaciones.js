@@ -6,7 +6,7 @@
 //exportamos para usarla en otros archivos
 export function valida(input){
     //Dataset lo que nosotros estamos obteniendo es la colección de todos los datas atribute
-    //El punto tipo es para obtener el tipo de Input.
+    //El punto tipo nos hace obtener todos los input con el data atributte llamado tipo.
     const tipoDeInput = input.dataset.tipo;
     //Necesitamos por cada uno de los tipos de input o por el tipo de input, verificar si existe dentro de los validadores.
     if(validadores[tipoDeInput]){
@@ -50,6 +50,7 @@ const tipoDeErrores = [
 //Esto nos ayudará con los tipos de errores de cada uno de los inputs de nuestro formulario.
 //Para cada tipo de error mostraremos un mensaje diferente.
 const mensajesDeError =  {
+    //Tenemos nuestros tipos de inputs que tienen el data atribute llamado tipo.
     //Tenemos primero al objeto del input del nombre.
     nombre: {
         //Con ValueMissing verificamos si el valor está faltando si el usuario no puso nada allí.
@@ -76,6 +77,10 @@ const mensajesDeError =  {
         customError: "Debes tener al menos 18 años de edad",
     },
 
+    numero : {
+        valueMissing: "Este campo no puede estar vacío.",
+        patternMismatch: "El formato requerido es XXXXXXXXXX.",
+    },
 };
 
 const validadores = {
